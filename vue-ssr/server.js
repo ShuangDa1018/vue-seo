@@ -52,5 +52,5 @@ router.get('*', async (ctx, next) => {
 app.use(router.routes()).use(router.allowedMethods())
 
 app.listen(8001,()=>{
-  console.log('启动成功')
+  console.log('http://localhost:8001')
 })
