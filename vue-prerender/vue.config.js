@@ -1,12 +1,3 @@
-/*
- * @Author: 余畅畅
- * @Date: 2021-05-07 10:26:56
- * @LastEditTime: 2021-05-07 11:33:49
- * @LastEditors: 余畅畅
- * @Description:
- * @FilePath: \new-projects\demo1\vue.config.js
- *
- */
 const path = require('path')
 const PrerenderSPAPlugin = require('prerender-spa-plugin')
 const Renderer = PrerenderSPAPlugin.PuppeteerRenderer
@@ -21,14 +12,14 @@ module.exports = {
         staticDir: path.join(__dirname, './dist'),
 
         // 对应自己的路由文件，比如a有参数，就需要写成 /a/param1。
-        routes: ['/HelloWorld', '/A'],
+        routes: ['/#/HelloWorld', '/#/A'],
 
         // 这个很重要，如果没有配置这段，也不会进行预编译
         renderer: new Renderer({
           inject: {
             foo: 'bar',
           },
-          // headless: false,
+          headless: false,
           renderAfterDocumentEvent: 'render-event', // 在 main.js 中 document.dispatchEvent(new Event('render-event'))，两者的事件名称要对应上。
           args: ['--no-sandbox', '--disable-setuid-sandbox'],
         }),

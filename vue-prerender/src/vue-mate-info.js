@@ -1,13 +1,3 @@
-/*
- * @Author: 余畅畅
- * @Date: 2021-05-07 10:32:47
- * @LastEditTime: 2021-05-07 11:31:54
- * @LastEditors: 余畅畅
- * @Description:
- * @FilePath: \new-projects\demo1\src\vue-mate-info.js
- *
- */
-
 export default {
   first: {
     title: '我是一个title[first]',

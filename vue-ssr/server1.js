@@ -38,8 +38,8 @@ app.get('*', (req, res) => {
     }
   })
 })
-app.listen(8001,()=>{
-  console.log('启动成功')
+app.listen(1001,()=>{
+  console.log('http://localhost:1001 express服务端渲染')
 })
 /*服务启动*/
 // http.createServer(app).listen(app.get('port'), function () {
